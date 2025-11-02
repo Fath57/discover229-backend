@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Auth\ProvidersAuthController;
 use App\Http\Controllers\Api\Auth\RegisteredUserController;
 use App\Http\Controllers\Api\Auth\UserProfileController;
 use App\Http\Controllers\Api\ModuleController;
+use App\Http\Controllers\Api\OurServiceController;
 use App\Http\Controllers\Api\PermissionController;
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\UserController;
@@ -47,4 +48,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // User Role Assignment
     Route::post('/users/{userId}/assign-role', [PermissionController::class, 'assignRoleToUser']);
     Route::delete('/users/{userId}/remove-role', [PermissionController::class, 'removeRoleFromUser']);
+
+    //Our Services Routes
+    Route::apiResource('our-services', OurServiceController::class);
 });

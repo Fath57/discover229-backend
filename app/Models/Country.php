@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    use HasFactory, Translatable;
+    use HasFactory;
 
 
     public $translatedAttributes = ['name'];

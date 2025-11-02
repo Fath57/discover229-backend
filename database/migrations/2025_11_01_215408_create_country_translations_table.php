@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('country_translations', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('country_id')->unsigned();
+            $table->mediumInteger('country_id')->unsigned();
             $table->string('locale')->index();
 
             $table->string('name');

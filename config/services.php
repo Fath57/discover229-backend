@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+
+    'translation' => [
+        'provider' => env('TRANSLATION_PROVIDER', 'openai'), // 'openai' ou 'gemini'
+    ],
+
+    'gemini' => [
+        'api_key' => env('GEMINI_API_KEY'),
+    ],
+
 ];
